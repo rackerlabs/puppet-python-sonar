@@ -11,6 +11,11 @@ class { 'java': }
 class { 'sonarqube':
   version => '4.3.2',
   jdbc => $jdbc,
+  require => [
+      Class['maven::maven'],
+      Postgresql::Server::Db['sonar']
+  ],
+
 }
 
 sonarqube::plugin{'sonar-scm-activity':
