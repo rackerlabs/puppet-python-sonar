@@ -10,9 +10,23 @@ SonarQube with Python and Flake8
 - [SCM Activity](http://docs.codehaus.org/display/SONAR/SCM+Activity+Plugin)
 - PostgreSQL Database
 
-### Prerequisites
+### Installing Module Dependencies
+The puppet module dependencies can be installed using librarian-puppet with the Puppetfile, or manually with the following commands:
+```
+puppet module install maestrodev-sonarqube
+puppet module install puppetlabs-java
+puppet module install puppetlabs-postgresql
+puppet module install stankevich-python
+```
 
 
+### Installing This Module
+```
+git clone https://github.com/rackerlabs/puppet-python-sonar.git
+mkdir -p /usr/share/puppet/modules
+cp -r puppet-python-sonar/python_sonar /usr/share/puppet/modules
+puppet apply puppet-python-sonar/default.pp
+```
 
 
 ### Using Sonar with Jenkins
@@ -22,7 +36,7 @@ SonarQube with Python and Flake8
 Other Configuration Values:
 ```
 Database URL: jdbc:postgresql://<sonar-uri>/sonar
-Database driver:	org.postgresql.Driver
+Database driver: org.postgresql.Driver
 ```
 
 - Follow [these steps](http://docs.codehaus.org/display/SONAR/Triggering+SonarQube+on+Jenkins+Job#TriggeringSonarQubeonJenkinsJob-TriggeringaProjectAnalysiswiththeSonarQubeRunner) to configure a project to run Sonar analysis. Include the following in the project properties.
