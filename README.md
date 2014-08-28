@@ -10,6 +10,12 @@ SonarQube with Python and Flake8
 - [SCM Activity](http://docs.codehaus.org/display/SONAR/SCM+Activity+Plugin)
 - PostgreSQL Database
 
+### Pre-requisites
+If you want to run pylint rules, make sure that pylint is installed on the server where static analysis is executing (e.g. Jenkins).  Example
+```
+pip install pylint
+```
+
 ### Installing Module Dependencies
 The puppet module dependencies can be installed using librarian-puppet with the Puppetfile, or manually with the following commands:
 ```
