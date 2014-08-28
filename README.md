@@ -11,9 +11,10 @@ SonarQube with Python and Flake8
 - PostgreSQL Database
 
 ### Pre-requisites
-If you want to run pylint rules, make sure that pylint is installed on the server where static analysis is executing (e.g. Jenkins).  Example
+If you want to run pylint or flake8 rules, make sure that they are installed on the server where static analysis is executing (e.g. Jenkins).  Example:
 ```
 pip install pylint
+pip install flake8
 ```
 
 ### Installing Module Dependencies
