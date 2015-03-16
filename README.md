@@ -38,7 +38,7 @@ puppet apply puppet-python-sonar/default.pp
 
 ### Using Sonar with Jenkins
 - Install the SonarQube plugin on Jenkins
-- Follow [these steps](http://docs.codehaus.org/display/SONAR/Configuring+SonarQube+Jenkins+Plugin) to configure your Jenkins project. The database username and password are set in init.pp and both default to "sonar." When adding a Sonar Runner, use the "Install automatically" option.
+- Follow [these steps](http://docs.sonarqube.org/display/SONAR/Configuring+SonarQube+Jenkins+Plugin) to configure your Jenkins project. The database username and password are set in init.pp and both default to "sonar." When adding a Sonar Runner, use the "Install automatically" option.
 
 Other Configuration Values:
 ```
@@ -46,7 +46,7 @@ Database URL: jdbc:postgresql://<sonar-uri>/sonar
 Database driver: org.postgresql.Driver
 ```
 
-- Follow [these steps](http://docs.codehaus.org/display/SONAR/Triggering+SonarQube+on+Jenkins+Job#TriggeringSonarQubeonJenkinsJob-TriggeringaProjectAnalysiswiththeSonarQubeRunner) to configure a project to run Sonar analysis. Include the following in the project properties.
+- Follow [these steps](http://docs.sonarqube.org/display/SONAR/Triggering+SonarQube+on+Jenkins+Job) to configure a project to run Sonar analysis. Include the following in the project properties.
 ```
 # required metadata
 sonar.projectKey=<project:key>
